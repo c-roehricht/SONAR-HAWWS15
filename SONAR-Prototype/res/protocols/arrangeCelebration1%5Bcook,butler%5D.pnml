@@ -1,0 +1,1010 @@
+<pnml xmlns="RefNet">
+   <net id="netId1451745421628" type="RefNet">
+      <place id="23115">
+         <name>
+            <graphics>
+               <offset x="-28" y="-14"/>
+            </graphics>
+            <text>start</text>
+         </name>
+         <initialMarking>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>[]</text>
+         </initialMarking>
+         <graphics>
+            <position x="420" y="94"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <transition id="23117">
+         <name>
+            <graphics>
+               <offset x="1" y="4"/>
+            </graphics>
+            <text>t8</text>
+         </name>
+         <name>
+            <graphics>
+               <offset x="-37" y="-14"/>
+            </graphics>
+            <text>send</text>
+         </name>
+         <graphics>
+            <position x="473" y="528"/>
+            <dimension x="30" y="20"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23118" source="23117" target="23119">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>meal</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23119">
+         <name>
+            <graphics>
+               <offset x="0" y="-18"/>
+            </graphics>
+            <text>meal</text>
+         </name>
+         <graphics>
+            <position x="590" y="532"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <arc id="23120" source="23119" target="23121">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>meal</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23121">
+         <name>
+            <graphics>
+               <offset x="37" y="-16"/>
+            </graphics>
+            <text>receive</text>
+         </name>
+         <name>
+            <graphics>
+               <offset x="-1" y="2"/>
+            </graphics>
+            <text>t11</text>
+         </name>
+         <graphics>
+            <position x="709" y="534"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23122" source="23121" target="23123">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>meal</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23123">
+         <graphics>
+            <position x="705" y="591"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,255)"/>
+         </graphics>
+      </place>
+      <place id="23124">
+         <name>
+            <graphics>
+               <offset x="29" y="-15"/>
+            </graphics>
+            <text>start</text>
+         </name>
+         <initialMarking>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>[]</text>
+         </initialMarking>
+         <graphics>
+            <position x="708" y="93"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,255)"/>
+         </graphics>
+      </place>
+      <arc id="23126" source="23117" target="23127">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23127">
+         <graphics>
+            <position x="472" y="603"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <arc id="23128" source="23127" target="23129">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23129">
+         <name>
+            <graphics>
+               <offset x="-48" y="4"/>
+            </graphics>
+            <text>receive
+acknowledge</text>
+         </name>
+         <name>
+            <graphics>
+               <offset x="28" y="-2"/>
+            </graphics>
+            <text>t3</text>
+         </name>
+         <name>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>t9</text>
+         </name>
+         <graphics>
+            <position x="470" y="833"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23130" source="23123" target="23131">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>meal = "meat"</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23131">
+         <name>
+            <graphics>
+               <offset x="54" y="-3"/>
+            </graphics>
+            <text>order beer</text>
+         </name>
+         <name>
+            <graphics>
+               <offset x="3" y="-1"/>
+            </graphics>
+            <text>t12</text>
+         </name>
+         <graphics>
+            <position x="636" y="655"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23132" source="23115" target="23133">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23133">
+         <name>
+            <graphics>
+               <offset x="-2" y="1"/>
+            </graphics>
+            <text>t1</text>
+         </name>
+         <name>
+            <graphics>
+               <offset x="-62" y="-4"/>
+            </graphics>
+            <text>decideMeal</text>
+         </name>
+         <graphics>
+            <position x="420" y="141"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23134" source="23133" target="23135">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <position x="420" y="165"/>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23135">
+         <graphics>
+            <position x="420" y="182"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <place id="23136">
+         <name>
+            <graphics>
+               <offset x="-27" y="6"/>
+            </graphics>
+            <text>stop</text>
+         </name>
+         <graphics>
+            <position x="418" y="974"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <arc id="23137" source="23131" target="23010">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>[meal, "beer"]</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23010">
+         <graphics>
+            <position x="634" y="729"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,255)"/>
+         </graphics>
+      </place>
+      <arc id="23138" source="23010" target="23139">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>[meal, drink]</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23139">
+         <name>
+            <graphics>
+               <offset x="-2" y="-1"/>
+            </graphics>
+            <text>t13</text>
+         </name>
+         <graphics>
+            <position x="636" y="782"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <place id="23141">
+         <name>
+            <graphics>
+               <offset x="29" y="8"/>
+            </graphics>
+            <text>stop</text>
+         </name>
+         <graphics>
+            <position x="707" y="968"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(255,255,0)"/>
+            <line color="rgb(0,0,255)"/>
+         </graphics>
+      </place>
+      <transition id="23156">
+         <uplink>
+            <graphics>
+               <offset x="37" y="6"/>
+            </graphics>
+            <text>:stop()</text>
+         </uplink>
+         <graphics>
+            <position x="533" y="995"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(255,199,158)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23157" source="23141" target="23156">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23159">
+         <uplink>
+            <graphics>
+               <offset x="-1" y="-17"/>
+            </graphics>
+            <text>:start()</text>
+         </uplink>
+         <graphics>
+            <position x="525" y="57"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(255,199,158)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23160" source="23159" target="23115">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <position x="420" y="63"/>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <arc id="23161" source="23159" target="23124">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <position x="634" y="71"/>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23208">
+         <name>
+            <graphics>
+               <offset x="1" y="-26"/>
+            </graphics>
+            <text>drink</text>
+         </name>
+         <graphics>
+            <position x="582" y="876"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <arc id="23211" source="23208" target="23129">
+         <inscription>
+            <graphics>
+               <offset x="0" y="45"/>
+            </graphics>
+            <text>[meal, drink]</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <arc id="23241" source="23135" target="23242">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23242">
+         <name>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>t4</text>
+         </name>
+         <graphics>
+            <position x="458" y="227"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23243" source="23135" target="23244">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23244">
+         <name>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>t2</text>
+         </name>
+         <graphics>
+            <position x="380" y="228"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23245" source="23244" target="23246">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>"fish"</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23246">
+         <graphics>
+            <position x="383" y="270"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <arc id="23247" source="23242" target="23248">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>"meat"</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23248">
+         <graphics>
+            <position x="458" y="263"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <arc id="23258" source="23246" target="23259">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>meal</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23259">
+         <name>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>t3</text>
+         </name>
+         <graphics>
+            <position x="381" y="318"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23260" source="23248" target="23261">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>meal</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23261">
+         <name>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>t5</text>
+         </name>
+         <graphics>
+            <position x="458" y="316"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23262" source="23259" target="23263">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>meal</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23263">
+         <graphics>
+            <position x="419" y="365"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <arc id="23264" source="23261" target="23263">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>meal</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <arc id="23278" source="23124" target="23121">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <arc id="23279" source="23123" target="23280">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>meal = "fish"</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23280">
+         <name>
+            <graphics>
+               <offset x="43" y="-12"/>
+            </graphics>
+            <text>take wine</text>
+         </name>
+         <name>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>t14</text>
+         </name>
+         <graphics>
+            <position x="792" y="659"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23282" source="23280" target="23283">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>[meal, "wine"]</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23283">
+         <graphics>
+            <position x="794" y="727"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <arc id="23285" source="23283" target="23286">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>[meal, drink]</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23286">
+         <name>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>t15</text>
+         </name>
+         <graphics>
+            <position x="795" y="783"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23288" source="23286" target="23289">
+         <inscription>
+            <graphics>
+               <offset x="18" y="-3"/>
+            </graphics>
+            <text>[meal, drink]</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <position x="763" y="808"/>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23289">
+         <graphics>
+            <position x="709" y="834"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <arc id="23290" source="23139" target="23289">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>[meal, drink]</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <arc id="23293" source="23289" target="23294">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>[meal, drink]</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23294">
+         <name>
+            <graphics>
+               <offset x="77" y="-1"/>
+            </graphics>
+            <text>send acknowledge</text>
+         </name>
+         <name>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>t16</text>
+         </name>
+         <graphics>
+            <position x="709" y="902"/>
+            <dimension x="24" y="25"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23295" source="23294" target="23208">
+         <inscription>
+            <graphics>
+               <offset x="-49" y="23"/>
+            </graphics>
+            <text>[meal, drink]</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23305">
+         <name>
+            <graphics>
+               <offset x="-66" y="-3"/>
+            </graphics>
+            <text>prepare meal</text>
+         </name>
+         <name>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>t7</text>
+         </name>
+         <graphics>
+            <position x="372" y="525"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23307" source="23305" target="23308">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23308">
+         <graphics>
+            <position x="364" y="872"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <arc id="23310" source="23129" target="23311">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23311">
+         <graphics>
+            <position x="455" y="878"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <arc id="23312" source="23311" target="23313">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23313">
+         <name>
+            <graphics>
+               <offset x="-69" y="2"/>
+            </graphics>
+            <text>finish preparation </text>
+         </name>
+         <name>
+            <graphics>
+               <offset x="2" y="-2"/>
+            </graphics>
+            <text>t10</text>
+         </name>
+         <graphics>
+            <position x="416" y="918"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23314" source="23308" target="23313">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <arc id="23317" source="23313" target="23136">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <arc id="23327" source="23294" target="23141">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <arc id="23329" source="23263" target="23330">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>meal</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <transition id="23330">
+         <name>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>t6</text>
+         </name>
+         <graphics>
+            <position x="420" y="429"/>
+            <dimension x="24" y="16"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </transition>
+      <arc id="23331" source="23330" target="23332">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>meal</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23332">
+         <graphics>
+            <position x="455" y="468"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <arc id="23333" source="23330" target="23334">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>meal</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <place id="23334">
+         <graphics>
+            <position x="380" y="468"/>
+            <dimension x="20" y="20"/>
+            <fill color="rgb(112,219,147)"/>
+            <line color="rgb(0,0,0)"/>
+         </graphics>
+      </place>
+      <arc id="23335" source="23334" target="23305">
+         <inscription>
+            <graphics>
+               <offset x="0" y="0"/>
+            </graphics>
+            <text>meal</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <arc id="23338" source="23332" target="23117">
+         <inscription>
+            <graphics>
+               <offset x="9" y="-4"/>
+            </graphics>
+            <text>meal</text>
+         </inscription>
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <arc id="23343" source="23136" target="23156">
+         <type>
+            <text>ordinary</text>
+         </type>
+         <graphics>
+            <line color="rgb(0,0,0)" style="solid"/>
+         </graphics>
+      </arc>
+      <name>
+         <text>arrangeCelebration1%5Bcook,butler%5D</text>
+      </name>
+   </net>
+</pnml>

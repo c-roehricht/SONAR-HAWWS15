@@ -1,0 +1,77 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="organisation" type="Organisation"></xs:element>
+	<xs:element name="opa" type="Opa"></xs:element>	
+	<xs:element name="protocol" type="Protocol"></xs:element>
+	<xs:element name="role" type="xs:string"></xs:element>
+	<xs:element name="task" type="Task"></xs:element>
+	<xs:element name="exec" type="Exec"></xs:element>
+	<xs:element name="split" type="Split"></xs:element>
+	<xs:element name="deleg" type="Deleg"></xs:element>
+	<xs:element name="refine" type="Refine"></xs:element>
+	<xs:element name="input" type="Input"></xs:element>
+	<xs:element name="output" type="Output"></xs:element>
+	<xs:complexType name="Organisation">
+		<xs:sequence>
+			<xs:element ref="protocol" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element ref="opa" maxOccurs="unbounded" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Opa">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element ref="task" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="resource" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+			<xs:element name="communicationProtocol" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Protocol">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+			<xs:element ref="role" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="file" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Task">
+		<xs:sequence>
+			<xs:element ref="exec"  minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="split" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="refine" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="deleg" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Exec">
+		<xs:sequence>
+			<xs:element ref="input" minOccurs="1" maxOccurs="1"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Split">
+		<xs:sequence>
+			<xs:element ref="input" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="output" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Refine">
+		<xs:sequence>
+			<xs:element ref="input" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="output" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Deleg">
+		<xs:sequence>
+			<xs:element ref="input" minOccurs="1" maxOccurs="unbounded"></xs:element>
+			<xs:element name="to" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Input">
+		<xs:sequence>
+			<xs:element name="protocol" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="role" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Output">
+		<xs:sequence>
+			<xs:element name="protocol" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element ref="role" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

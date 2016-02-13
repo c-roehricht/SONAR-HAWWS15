@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"> <!-- TODO: es fehlen noch schließende Tags // Header nochmal ansehen/anpassen)-->
+    <xs:element name="organisation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="protocols">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="protocol" minOccurs="1" maxOccurs="unbounded" >
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string"/>
+                                        <xs:element name="roles">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="role" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+										<xs:element name="file" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="opas">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="opa" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="name" type="xs:string"/>
+                                        <xs:element name="tasks">
+                                            <xs:complexType>
+												<xs:sequence>
+													<xs:element name="exec" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="input">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="protocol" type="xs:string"/>
+																			<xs:element name="role" type="xs:string"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="split" minOccurs="00" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="input">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="protocol" type="xs:string"/>
+																			<xs:element name="roles">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="role" type="xs:string" minOccurs="2" maxOccurs="2"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="outputs">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="output" minOccurs="1" maxOccurs="unbounded">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="protocol" type="xs:string"/>
+																						<xs:element name="role" type="xs:string"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="refine" minOccurs="00" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="input">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="protocol" type="xs:string"/>
+																			<xs:element name="role" type="xs:string"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="output">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="protocol"
+																			type="xs:string"/>
+																			<xs:element name="roles">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="role" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="deleg" minOccurs="00" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="input">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="protocol" type="xs:string"/>
+																			<xs:element name="role" type="xs:string"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="to" type="xs:string"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="resources">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="resource" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="communicationProtocols">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="communicationProtocol" minOccurs="1" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="name" type="xs:string"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
